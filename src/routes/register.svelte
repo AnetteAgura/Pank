@@ -34,6 +34,7 @@
                 {#if error}
                     <div class="alert alert-danger" role="alert">{error}</div>
                 {/if}
+
                 <form on:submit|preventDefault={submit}>
                     <fieldset class="form-group">
                         <input class="form-control form-control-lg" type="text" required placeholder="Username"
