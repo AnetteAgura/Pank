@@ -1,7 +1,7 @@
 <script context="module">
     export async function preload({ params }, { token }) {
         if (token) {
-            this.redirect(302, `/`);
+            this.redirect(302, `/?4`);
         }
     }
 </script>
@@ -14,18 +14,18 @@
     let password = '';
     let error = null;
     async function submit(event) {
-        const response = await post(`auth/login`, { username, password });
+        const response = await post(`api/login`, {username, password});
         // TODO handle network errors
         error = response.errors;
         if (response.token) {
             $session.token = response.token;
-            goto('/');
+            goto('/?1');
         }
     }
 </script>
 
 <svelte:head>
-    <title>Sign in • Conduit</title>
+    <title>Sign in • Barbank</title>
 </svelte:head>
 
 <div class="auth-page">

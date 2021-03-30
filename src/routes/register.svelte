@@ -9,7 +9,7 @@
     let error = null;
 
     async function submit(event) {
-        const response = await post(`auth/register`, {username, name, password});
+        const response = await post(`api/register`, {username, name, password});
         // TODO handle network errors
         error = response.error;
         if (response.id) {
