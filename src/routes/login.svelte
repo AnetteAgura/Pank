@@ -16,7 +16,7 @@
     async function submit(event) {
         const response = await post(`auth/login`, { username, password });
         // TODO handle network errors
-        error = response.errors;
+        error = response.error;
         if (response.token) {
             $session.token = response.token;
             goto('/');

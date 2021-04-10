@@ -1,4 +1,5 @@
 <script context="module">
+
     export async function preload({params}, {token}) {
         console.log(token)
         if (!token) {
@@ -6,6 +7,7 @@
         }
     }
 </script>
+
 <script>
     import UserData from "../components/UserData.svelte";
     import LastOperations from "../components/LastOperations.svelte";
